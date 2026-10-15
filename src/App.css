@@ -1,0 +1,166 @@
+/* App.css - Paradise Nursery Styling */
+
+.landing-page,
+.background-image {
+  background-image: linear-gradient(
+      rgba(6, 40, 20, 0.72),
+      rgba(4, 25, 12, 0.85)
+    ),
+    url('https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+  box-sizing: border-box;
+  color: #ffffff;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.landing-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 30%, rgba(34, 197, 94, 0.15), transparent 70%);
+}
+
+.landing-hero {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.brand-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(34, 197, 94, 0.2);
+  border: 1px solid rgba(74, 222, 128, 0.4);
+  padding: 0.4rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #86efac;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+}
+
+.company-title,
+.landing-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 1rem 0;
+  line-height: 1.1;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  letter-spacing: -0.5px;
+}
+
+.company-title span {
+  color: #4ade80;
+  background: linear-gradient(135deg, #4ade80 0%, #a7f3d0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.company-tagline {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #d1fae5;
+  margin-bottom: 2rem;
+  max-width: 650px;
+  line-height: 1.5;
+}
+
+.divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #22c55e, #86efac);
+  border-radius: 2px;
+  margin-bottom: 2.5rem;
+}
+
+.landing-action {
+  margin-bottom: 3.5rem;
+}
+
+.get-started-button,
+.get-started-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  color: #ffffff;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 1.1rem 2.8rem;
+  border: 1px solid rgba(134, 239, 172, 0.4);
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 25px -5px rgba(22, 163, 74, 0.5), 0 8px 10px -6px rgba(22, 163, 74, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.get-started-button:hover,
+.get-started-btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  box-shadow: 0 20px 35px -5px rgba(34, 197, 94, 0.6), 0 10px 10px -5px rgba(34, 197, 94, 0.4);
+}
+
+.get-started-button:active,
+.get-started-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.get-started-arrow {
+  transition: transform 0.3s ease;
+  font-size: 1.3rem;
+}
+
+.get-started-button:hover .get-started-arrow,
+.get-started-btn:hover .get-started-arrow {
+  transform: translateX(5px);
+}
+
+/* About Us Section in Landing */
+.landing-about-section {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Responsive queries */
+@media (max-width: 768px) {
+  .company-title,
+  .landing-title {
+    font-size: 3rem;
+  }
+  .company-tagline {
+    font-size: 1.15rem;
+  }
+  .get-started-button,
+  .get-started-btn {
+    font-size: 1.1rem;
+    padding: 0.9rem 2.2rem;
+  }
+}
